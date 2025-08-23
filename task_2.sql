@@ -8,7 +8,7 @@ USE alx_book_store;
 -- =====================
 -- Table: authors
 -- =====================
-CREATE TABLE IF NOT EXISTS authors (
+CREATE TABLE IF NOT EXISTS Authors (
     author_id INT AUTO_INCREMENT PRIMARY KEY,
     first_name VARCHAR(100) NOT NULL,
     last_name VARCHAR(100) NOT NULL,
@@ -64,3 +64,4 @@ CREATE TABLE IF NOT EXISTS order_details (
     FOREIGN KEY (order_id) REFERENCES orders(order_id) ON DELETE CASCADE,
     FOREIGN KEY (book_id) REFERENCES books(book_id) ON DELETE CASCADE
 );
+
