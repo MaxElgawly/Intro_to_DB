@@ -1,14 +1,13 @@
 -- task_2.sql
 -- Create tables for alx_book_store
 
--- Ensure we are using the correct database
 CREATE DATABASE IF NOT EXISTS alx_book_store;
 USE alx_book_store;
 
 -- =====================
--- Table: authors
+-- TABLE: AUTHORS
 -- =====================
-CREATE TABLE IF NOT EXISTS Authors (
+CREATE TABLE IF NOT EXISTS authors (
     author_id INT AUTO_INCREMENT PRIMARY KEY,
     first_name VARCHAR(100) NOT NULL,
     last_name VARCHAR(100) NOT NULL,
@@ -17,7 +16,7 @@ CREATE TABLE IF NOT EXISTS Authors (
 );
 
 -- =====================
--- Table: books
+-- TABLE: BOOKS
 -- =====================
 CREATE TABLE IF NOT EXISTS books (
     book_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -30,19 +29,17 @@ CREATE TABLE IF NOT EXISTS books (
 );
 
 -- =====================
--- Table: customers
+-- TABLE: CUSTOMERS
 -- =====================
 CREATE TABLE IF NOT EXISTS customers (
     customer_id INT AUTO_INCREMENT PRIMARY KEY,
-    first_name VARCHAR(100) NOT NULL,
-    last_name VARCHAR(100) NOT NULL,
+    customer_name VARCHAR(200) NOT NULL,
     email VARCHAR(150) UNIQUE NOT NULL,
-    phone_number VARCHAR(20),
     address VARCHAR(255)
 );
 
 -- =====================
--- Table: orders
+-- TABLE: ORDERS
 -- =====================
 CREATE TABLE IF NOT EXISTS orders (
     order_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -53,7 +50,7 @@ CREATE TABLE IF NOT EXISTS orders (
 );
 
 -- =====================
--- Table: order_details
+-- TABLE: ORDER_DETAILS
 -- =====================
 CREATE TABLE IF NOT EXISTS order_details (
     order_detail_id INT AUTO_INCREMENT PRIMARY KEY,
