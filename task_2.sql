@@ -32,8 +32,8 @@ CREATE TABLE IF NOT EXISTS Books (
 -- =====================
 CREATE TABLE IF NOT EXISTS Customers (
     customer_id INT AUTO_INCREMENT PRIMARY KEY,
-    customer_name VARCHAR(200) NOT NULL,
-    email VARCHAR(150) UNIQUE NOT NULL,
+    customer_name VARCHAR(215) NOT NULL,
+    email VARCHAR(215) UNIQUE NOT NULL,
     address VARCHAR(255)
 );
 
@@ -60,6 +60,7 @@ CREATE TABLE IF NOT EXISTS Order_details (
     FOREIGN KEY (order_id) REFERENCES orders(order_id) ON DELETE CASCADE,
     FOREIGN KEY (book_id) REFERENCES books(book_id) ON DELETE CASCADE
 );
+
 
 
 
