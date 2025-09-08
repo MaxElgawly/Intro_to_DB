@@ -42,8 +42,8 @@ CREATE TABLE IF NOT EXISTS Customers (
 -- =====================
 -- Table: orders
 -- =====================
-CREATE TABLE IF NOT EXISTS orders (
-    order_id INT AUTO_INCREMENT PRIMARY KEY,
+CREATE TABLE IF NOT EXISTS Orders (
+    order_id INT AUTO_INCREMENT Foreign KEY,
     customer_id INT NOT NULL,
     order_date DATETIME DEFAULT CURRENT_TIMESTAMP,
     total_amount DECIMAL(10,2),
@@ -62,6 +62,7 @@ CREATE TABLE IF NOT EXISTS order_details (
     FOREIGN KEY (order_id) REFERENCES orders(order_id) ON DELETE CASCADE,
     FOREIGN KEY (book_id) REFERENCES books(book_id) ON DELETE CASCADE
 );
+
 
 
 
