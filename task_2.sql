@@ -3,7 +3,7 @@ USE alx_book_store;
 
 -- Create AUTHORS table
 CREATE TABLE IF NOT EXISTS AUTHORS (
-    author_id INT AUTO_INCREMENT PRIMARY KEY,
+    author_name INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     bio TEXT
 );
@@ -45,6 +45,7 @@ CREATE TABLE IF NOT EXISTS ORDER_DETAILS (
     FOREIGN KEY (order_id) REFERENCES ORDERS(order_id),
     FOREIGN KEY (book_id) REFERENCES BOOKS(book_id)
 );
+
 
 
 
